@@ -9,34 +9,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var show : Bool = false
+    
     var body: some View {
         
         ZStack {
             
             TitleView()
-                .blur(radius: 20)
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
             
             CardButtomView()
-                .blur(radius: 20)
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
             
             CardView()
-                .offset(x: 0, y: -40.0)
+                .background(show ? Color.red : Color("background9"))
+                .cornerRadius(10)
+                .shadow(radius: 20)
+                .offset(x: 0, y: show ? -380 :  -40.0)
                 .scaleEffect(0.85)
-                .rotationEffect(Angle(degrees: 15))
-                .rotation3DEffect(Angle(degrees: 50), axis: (x: 10 , y: 10, z: 10))
+                .rotationEffect(Angle(degrees: show ? 15 : 0))
+//                .rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: (x: 10 , y: 10, z: 10))
                 .blendMode(.hardLight)
+                .animation(Animation.easeInOut(duration: 1.2))
             
             CardView()
-                .offset(x: 0, y: -20.0)
+                .background(show ? Color.red : Color("background8"))
+                .cornerRadius(10)
+                .shadow(radius: 20)
+                .offset(x: 0, y: show ? -200 :  -20.0)
                 .scaleEffect(0.90)
-                .rotationEffect(Angle(degrees: 10))
-                .rotation3DEffect(Angle(degrees: 40), axis: (x: 10 , y: 10, z: 10))
+                .rotationEffect(Angle(degrees: show ? 10 : 0))
+//                .rotation3DEffect(Angle(degrees: show ? 40 : 0 ), axis: (x: 10 , y: 10, z: 10))
                 .blendMode(.hardLight)
+                .animation(Animation.easeInOut(duration: 1.2))
             
             CertificateView()
                 .scaleEffect(0.95)
-                .rotationEffect(Angle(degrees: 5))
-                .rotation3DEffect(Angle(degrees: 30), axis: (x: 10 , y: 10, z: 10))
+                .rotationEffect(Angle(degrees: show ? 5 : 0))
+                .rotation3DEffect(Angle(degrees: show ? 30 : 0 ), axis: (x: 10 , y: 10, z: 10))
+                .animation(Animation.easeInOut(duration: 1))
+                .onTapGesture {
+                    self.show.toggle()
+            }
         }
     }
 }
@@ -53,9 +70,6 @@ struct CardView: View {
             Text("Card Back")
         }
         .frame(width: 340.0, height: 220.0)
-        .background(Color.blue)
-        .cornerRadius(10)
-        .shadow(radius: 20)
     }
 }
 
@@ -69,7 +83,7 @@ struct CertificateView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color("accent"))
                         .padding(.top)
-                    Text("Certificate").foregroundColor(.white)
+                    Text("Certificate").foregroundColor(.white).padding(.top)
                 }
                 Spacer()
                 Image("Logo")
