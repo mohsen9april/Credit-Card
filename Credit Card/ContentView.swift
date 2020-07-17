@@ -11,21 +11,40 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack{
+        ZStack {
+            
             VStack{
-                Text("UI Desing")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("accent"))
-                    .padding(.top)
-                Text("Certificate").foregroundColor(.white)
+                Text("Card Back")
+            }
+            .frame(width: 300.0, height: 220.0)
+            .background(Color.blue)
+            .cornerRadius(10)
+            .shadow(radius: 20)
+            .offset(x: 0, y: -20.0)
+
+            VStack{
+                HStack{
+                    VStack(alignment : .leading){
+                        Text("UI Desing")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("accent"))
+                            .padding(.top)
+                        Text("Certificate").foregroundColor(.white)
+                    }
+                    Spacer()
+                    Image("Logo")
+                        .resizable()
+                        .frame(width: 30.0, height: 30.0)
+                }.padding(.horizontal)
+                Spacer()
                 Image("Background")
             }
+            .frame(width: 340, height: 220)
             .background(Color.black)
             .cornerRadius(10)
+            .shadow(radius: 20)
         }
-        
-
     }
 }
 
