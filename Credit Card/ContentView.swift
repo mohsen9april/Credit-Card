@@ -17,13 +17,9 @@ struct ContentView: View {
         
         ZStack {
             
-            TitleView()
-                .blur(radius: show ? 20 : 0)
-                .animation(.default)
+            TitleView().blur(radius: show ? 20 : 0).animation(.default)
             
-            CardButtomView()
-                .blur(radius: show ? 20 : 0)
-                .animation(.default)
+            CardButtomView().blur(radius: show ? 20 : 0).animation(.default)
             
             CardView()
                 .background(show ? Color("background8") : Color("background9"))

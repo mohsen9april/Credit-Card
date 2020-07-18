@@ -13,6 +13,7 @@
 		EDB0500324C1A3F90080BF65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500224C1A3F90080BF65 /* Assets.xcassets */; };
 		EDB0500624C1A3F90080BF65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500524C1A3F90080BF65 /* Preview Assets.xcassets */; };
 		EDB0500924C1A3F90080BF65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */; };
+		EDB285B124C2D89200560AF9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB285B024C2D89200560AF9 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EDB0500524C1A3F90080BF65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDB0500824C1A3F90080BF65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDB0500A24C1A3F90080BF65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB285B024C2D89200560AF9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */,
 				EDB0500A24C1A3F90080BF65 /* Info.plist */,
 				EDB0500424C1A3F90080BF65 /* Preview Content */,
+				EDB285B024C2D89200560AF9 /* Home.swift */,
 			);
 			path = "Credit Card";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				EDB04FFD24C1A3F80080BF65 /* AppDelegate.swift in Sources */,
 				EDB04FFF24C1A3F80080BF65 /* SceneDelegate.swift in Sources */,
+				EDB285B124C2D89200560AF9 /* Home.swift in Sources */,
 				EDB0500124C1A3F80080BF65 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Credit Card/Preview Content\"";
+				DEVELOPMENT_TEAM = A343Q2S8H5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Credit Card/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Credit Card/Preview Content\"";
+				DEVELOPMENT_TEAM = A343Q2S8H5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Credit Card/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
