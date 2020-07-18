@@ -17,6 +17,9 @@ struct ContentView: View {
         
         ZStack {
             
+            BlurView(style: .extraLight)
+            
+            
             TitleView().blur(radius: show ? 20 : 0).animation(.default)
             
             CardButtomView().blur(radius: show ? 20 : 0).animation(.default)

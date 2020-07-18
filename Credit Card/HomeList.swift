@@ -31,25 +31,39 @@ struct HomeList : View {
     ]
     
     var body: some View {
-        NavigationView{
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing : 30) {
-                    ForEach(cursesData , id: \.id) { item in
-                        NavigationLink(destination: ContentView()) {
-                            CourseView(
-                                title: item.title,
-                                image: item.image,color:
-                                item.color ,shadowColor:
-                                item.shadowColor
-                            )
+
+            NavigationView{
+                VStack {
+                    HStack {
+                        VStack(alignment : .leading) {
+                            Text("Courses")
+                                .font(.largeTitle)
+                                .fontWeight(.heavy)
+                            Text("22 Courses")
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                    }.padding(.leading, 70)
+                        .padding(.bottom, 40)
+                            ScrollView(.horizontal, showsIndicators: false){
+                                HStack(spacing : 30) {
+                                    ForEach(cursesData , id: \.id) { item in
+                                        NavigationLink(destination: ContentView()) {
+                                            CourseView(
+                                                title: item.title,
+                                                image: item.image,color:
+                                                item.color ,shadowColor:
+                                                item.shadowColor
+                                            )
+                                        }
+                                    }
+                                }.padding(.leading, 40)
+                                Spacer()
+                            }
                         }
                     }
-                }.padding(.leading, 30)
+                }
             }
-        }
-    }
-}
-
 
 struct HomeList_Previews : PreviewProvider {
     static var previews: some View {
@@ -70,7 +84,7 @@ struct CourseView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 .padding(.trailing, 50)
             Spacer()

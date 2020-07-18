@@ -15,6 +15,7 @@
 		EDB0500924C1A3F90080BF65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */; };
 		EDB285B124C2D89200560AF9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB285B024C2D89200560AF9 /* Home.swift */; };
 		EDF5E8DB24C35168001CB677 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DA24C35168001CB677 /* HomeList.swift */; };
+		EDF5E8DD24C369C4001CB677 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DC24C369C4001CB677 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EDB0500A24C1A3F90080BF65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB285B024C2D89200560AF9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EDF5E8DA24C35168001CB677 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		EDF5E8DC24C369C4001CB677 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				EDB0500024C1A3F80080BF65 /* ContentView.swift */,
 				EDB285B024C2D89200560AF9 /* Home.swift */,
 				EDF5E8DA24C35168001CB677 /* HomeList.swift */,
+				EDF5E8DC24C369C4001CB677 /* BlurView.swift */,
 				EDB0500224C1A3F90080BF65 /* Assets.xcassets */,
 				EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */,
 				EDB0500A24C1A3F90080BF65 /* Info.plist */,
@@ -157,6 +160,7 @@
 				EDB04FFF24C1A3F80080BF65 /* SceneDelegate.swift in Sources */,
 				EDB285B124C2D89200560AF9 /* Home.swift in Sources */,
 				EDB0500124C1A3F80080BF65 /* ContentView.swift in Sources */,
+				EDF5E8DD24C369C4001CB677 /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
