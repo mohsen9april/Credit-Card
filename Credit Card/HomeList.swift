@@ -9,15 +9,42 @@
 import Foundation
 import SwiftUI
 
-
 struct HomeList : View {
-    var body: some View {
+    
+    let cursesData = [
         
-        ScrollView(.horizontal, showsIndicators: false){
-            HStack {
-                ForEach(0 ..< 3) { item in
-                    CourseView()
-                }
+        Course(title: "Build an app in SwiftUI",
+               image: "Illustration1",
+               color: Color("background3"),
+               shadowColor: Color("background3")
+        ),
+        Course(title: "Design Course",
+               image: "Illustration2",
+               color: Color("background2"),
+               shadowColor: Color("background2")
+        ),
+        Course(title: "Design Data",
+               image: "Illustration3",
+               color: Color("background4"),
+               shadowColor: Color("background4")
+        )
+    ]
+    
+    var body: some View {
+        NavigationView{
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing : 30) {
+                    ForEach(cursesData , id: \.id) { item in
+                        NavigationLink(destination: ContentView()) {
+                            CourseView(
+                                title: item.title,
+                                image: item.image,color:
+                                item.color ,shadowColor:
+                                item.shadowColor
+                            )
+                        }
+                    }
+                }.padding(.leading, 30)
             }
         }
     }
@@ -31,23 +58,40 @@ struct HomeList_Previews : PreviewProvider {
 }
 
 struct CourseView: View {
+    
+    var title : String = "Build an app with SwiftUI "
+    var image : String = "Illustration1"
+    var color = Color("background3")
+    var shadowColor = Color("background3")
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Build an app with SwiftUI ")
+            Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(20)
                 .lineLimit(4)
-                .frame(width: 160)
-            
+                .padding(.trailing, 50)
             Spacer()
-            
-            Image("Illustration1")
+            Image(image)
+                .resizable()
+                .renderingMode(.original)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 246, height: 150)
+                .padding(.bottom, 30)
         }
-        .background(Color("background3"))
+        .background(color)
         .cornerRadius(30)
         .frame(width: 246, height: 360)
-        .shadow(color: Color("background3"), radius: 10, x: 0, y: 10)
+        .shadow(color: shadowColor, radius: 10, x: 0, y: 10)
     }
+}
+
+struct Course : Identifiable {
+    var id = UUID()
+    var title : String
+    var image : String
+    var color : Color
+    var shadowColor : Color
 }
