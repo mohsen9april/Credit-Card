@@ -16,25 +16,32 @@ struct UpdateList: View {
         
         NavigationView {
             List(updatesObj ){ item in
-                NavigationLink(destination: Text("1")) {
-                    VStack(alignment : .leading){
-                        Text(item.title).font(.headline)
-                        Text(item.text)
-                            .lineLimit(2)
-                            .lineSpacing(4)
-                            .frame(height : 50.0)
-                            .font(.subheadline)
-                        Text(item.date)
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(.gray)
+                NavigationLink(destination: UpdateDetail(title: item.title, text: item.text, image: item.image)) {
+                    HStack(spacing: 12.0) {
+                        Image(item.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width : 80, height: 80)
+                            .background(Color("background"))
+                            .cornerRadius(20)
                         
+                        VStack(alignment : .leading){
+                            Text(item.title).font(.headline)
+                            Text(item.text)
+                                .lineLimit(2)
+                                .lineSpacing(4)
+                                .frame(height : 50.0)
+                                .font(.subheadline)
+                            Text(item.date)
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                .foregroundColor(.gray)
+                        }
                     }
-                }
+                }.padding(.vertical, 8.0)
             }
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(trailing:
-                
                 NavigationLink(destination: Text("Setting View")) {
                     Image(systemName: "gear")
                 }
@@ -48,7 +55,6 @@ struct UpdateList_Previews: PreviewProvider {
         UpdateList()
     }
 }
-
 
 struct Update: Identifiable {
     var id = UUID()
