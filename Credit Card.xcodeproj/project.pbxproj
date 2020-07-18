@@ -16,6 +16,7 @@
 		EDB285B124C2D89200560AF9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB285B024C2D89200560AF9 /* Home.swift */; };
 		EDF5E8DB24C35168001CB677 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DA24C35168001CB677 /* HomeList.swift */; };
 		EDF5E8DD24C369C4001CB677 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DC24C369C4001CB677 /* BlurView.swift */; };
+		EDF5E8DF24C37301001CB677 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DE24C37301001CB677 /* UpdateList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EDB285B024C2D89200560AF9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EDF5E8DA24C35168001CB677 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		EDF5E8DC24C369C4001CB677 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		EDF5E8DE24C37301001CB677 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */,
 				EDB0500A24C1A3F90080BF65 /* Info.plist */,
 				EDB0500424C1A3F90080BF65 /* Preview Content */,
+				EDF5E8DE24C37301001CB677 /* UpdateList.swift */,
 			);
 			path = "Credit Card";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB04FFD24C1A3F80080BF65 /* AppDelegate.swift in Sources */,
+				EDF5E8DF24C37301001CB677 /* UpdateList.swift in Sources */,
 				EDF5E8DB24C35168001CB677 /* HomeList.swift in Sources */,
 				EDB04FFF24C1A3F80080BF65 /* SceneDelegate.swift in Sources */,
 				EDB285B124C2D89200560AF9 /* Home.swift in Sources */,
