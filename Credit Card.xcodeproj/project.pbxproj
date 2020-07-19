@@ -14,6 +14,7 @@
 		EDB0500624C1A3F90080BF65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500524C1A3F90080BF65 /* Preview Assets.xcassets */; };
 		EDB0500924C1A3F90080BF65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */; };
 		EDB285B124C2D89200560AF9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB285B024C2D89200560AF9 /* Home.swift */; };
+		EDC2A33124C416E900E7D7EA /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC2A33024C416E900E7D7EA /* UpdateStore.swift */; };
 		EDF5E8DB24C35168001CB677 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DA24C35168001CB677 /* HomeList.swift */; };
 		EDF5E8DD24C369C4001CB677 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DC24C369C4001CB677 /* BlurView.swift */; };
 		EDF5E8DF24C37301001CB677 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5E8DE24C37301001CB677 /* UpdateList.swift */; };
@@ -30,6 +31,7 @@
 		EDB0500824C1A3F90080BF65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDB0500A24C1A3F90080BF65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB285B024C2D89200560AF9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EDC2A33024C416E900E7D7EA /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		EDF5E8DA24C35168001CB677 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		EDF5E8DC24C369C4001CB677 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		EDF5E8DE24C37301001CB677 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				EDF5E8DC24C369C4001CB677 /* BlurView.swift */,
 				EDF5E8DE24C37301001CB677 /* UpdateList.swift */,
 				EDF5E8E024C38CED001CB677 /* UpdateDetail.swift */,
+				EDC2A33024C416E900E7D7EA /* UpdateStore.swift */,
 				EDB0500224C1A3F90080BF65 /* Assets.xcassets */,
 				EDB0500724C1A3F90080BF65 /* LaunchScreen.storyboard */,
 				EDB0500A24C1A3F90080BF65 /* Info.plist */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB04FFD24C1A3F80080BF65 /* AppDelegate.swift in Sources */,
+				EDC2A33124C416E900E7D7EA /* UpdateStore.swift in Sources */,
 				EDF5E8DF24C37301001CB677 /* UpdateList.swift in Sources */,
 				EDF5E8DB24C35168001CB677 /* HomeList.swift in Sources */,
 				EDF5E8E124C38CED001CB677 /* UpdateDetail.swift in Sources */,

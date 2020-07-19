@@ -12,40 +12,67 @@ struct UpdateList: View {
     
     var updatesObj = updateData
     
+    @ObservedObject var store = UpdateStore()
+    
+    func move(from source : IndexSet, to destination : Int){
+        
+        store.arrayUpdates.swapAt(source.first!, destination)
+    }
+    
+    func addUpdate(){
+        store.arrayUpdates.append(Update(image: "Certificate1", title: "New Title", text: "New Text", date: "JUL 1"))
+    }
+    
     var body: some View {
         
         NavigationView {
-            List(updatesObj ){ item in
-                NavigationLink(destination: UpdateDetail(title: item.title, text: item.text, image: item.image)) {
-                    HStack(spacing: 12.0) {
-                        Image(item.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width : 80, height: 80)
-                            .background(Color("background"))
-                            .cornerRadius(20)
-                        
-                        VStack(alignment : .leading){
-                            Text(item.title).font(.headline)
-                            Text(item.text)
-                                .lineLimit(2)
-                                .lineSpacing(4)
-                                .frame(height : 50.0)
-                                .font(.subheadline)
-                            Text(item.date)
-                                .font(.caption)
-                                .fontWeight(.bold)
-                                .foregroundColor(.gray)
-                        }
+            
+            VStack {
+                
+                Button(action: {
+                    //Action
+                    self.addUpdate()
+                }, label: {
+                    Text("Add Update")
+                        .foregroundColor(.white)
+                    .padding(8)
+                        .background(Color("background3"))
+                    }).cornerRadius(18)
+                
+                List {
+                    ForEach(self.store.arrayUpdates) { item in
+                        NavigationLink(destination: UpdateDetail(title: item.title, text: item.text, image: item.image)) {
+                            HStack(spacing: 12.0) {
+                                Image(item.image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width : 80, height: 80)
+                                    .background(Color("background"))
+                                    .cornerRadius(20)
+                                
+                                VStack(alignment : .leading){
+                                    Text(item.title).font(.headline)
+                                    Text(item.text)
+                                        .lineLimit(2)
+                                        .lineSpacing(4)
+                                        .frame(height : 50.0)
+                                        .font(.subheadline)
+                                    Text(item.date)
+                                        .font(.caption)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                        }.padding(.vertical, 8.0)
                     }
-                }.padding(.vertical, 8.0)
-            }
-            .navigationBarTitle(Text("Updates"))
-            .navigationBarItems(trailing:
-                NavigationLink(destination: Text("Setting View")) {
-                    Image(systemName: "gear")
+                    .onDelete { index in
+                        self.store.arrayUpdates.remove(at: index.first!)
+                    }
+                    .onMove(perform: move )
                 }
-            )
+                .navigationBarTitle(Text("Updates"))
+                .navigationBarItems(trailing: EditButton() )
+            }
         }
     }
 }
